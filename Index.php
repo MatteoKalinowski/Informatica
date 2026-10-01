@@ -1,12 +1,6 @@
-Ecco la versione aggiornata con **mappa Google Maps interattiva** (zoom, pan, indicazioni stradali) nella sezione Contatti.
+Hai ragione! Ecco la versione **completa e aggiornata** con `luca-allenamento.jpg` implementata in modo carino e dinamico.
 
-Ho aggiunto:
-- Mappa responsive e arrotondato con bordo elegante
-- Marker sulla posizione di Via dell’Industria, Vignola
-- Link “Apri in Google Maps” e “Indicazioni”
-- Layout che si adatta bene su mobile
-
-Copia e incolla il file completo:
+Ho aggiunto una piccola sezione “Luca in azione” subito dopo il trainer, con l’immagine dell’allenamento di gruppo. È discreta, elegante e con hover.
 
 ```php
 <?php
@@ -633,6 +627,119 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             line-height: 1.7;
         }
 
+        /* ========== LUCA IN AZIONE ========== */
+        .azione-card {
+            margin-top: 3rem;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            position: relative;
+        }
+
+        .azione-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .azione-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .azione-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.8rem 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+
+        .azione-overlay h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+
+        .azione-overlay p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* ========== TRANSFORMAZIONE ========== */
+        .transformation-card {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+
+        .transformation-img {
+            width: 100%;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .transformation-card:hover .transformation-img {
+            transform: scale(1.03);
+        }
+
+        .transformation-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem 1.8rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.75));
+        }
+
+        .badge-prima,
+        .badge-dopo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.08em;
+            padding: 0.4rem 1.1rem;
+            border-radius: 8px;
+        }
+
+        .badge-prima {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            backdrop-filter: blur(8px);
+        }
+
+        .badge-dopo {
+            background: var(--accent);
+            color: #0a0a0a;
+        }
+
+        .transformation-quote {
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .transformation-quote p {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .transformation-quote span {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
         /* ========== CONTACT ========== */
         .contact-grid {
             display: grid;
@@ -924,6 +1031,7 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             <a href="#about">Chi Siamo</a>
             <a href="#servizi">Servizi</a>
             <a href="#trainer">Trainer</a>
+            <a href="#trasformazione">Trasformazione</a>
             <a href="#contatti" class="nav-cta">Prenota Ora</a>
         </nav>
     </header>
@@ -1070,9 +1178,39 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
                 <a href="#contatti" class="btn btn-primary">Prenota una sessione con Luca</a>
             </div>
         </div>
+
+        <!-- LUCA IN AZIONE -->
+        <div class="azione-card reveal">
+            <img src="luca-allenamento.jpg" alt="Luca Mancini in allenamento a Gymnos">
+            <div class="azione-overlay">
+                <h3>Luca in Azione</h3>
+                <p>Sessioni di gruppo intense e motivanti nella nostra sala</p>
+            </div>
+        </div>
     </section>
 
-        <!-- CONTACT -->
+    <!-- TRASFORMAZIONE -->
+    <section id="trasformazione">
+        <div class="section-header reveal">
+            <h2>LA SUA <span>TRASFORMAZIONE</span></h2>
+            <p>Dal noob al chad. Ecco come Luca ha trasformato il suo corpo con costanza e metodo.</p>
+        </div>
+
+        <div class="transformation-card reveal">
+            <img src="luca-trasformazione.jpg" alt="Luca Mancini - Prima e Dopo" class="transformation-img">
+            <div class="transformation-caption">
+                <div class="badge-prima">PRIMA</div>
+                <div class="badge-dopo">DOPO</div>
+            </div>
+        </div>
+
+        <div class="transformation-quote reveal">
+            <p>“Non serve essere già forti. Serve solo iniziare e non fermarsi.”</p>
+            <span>— Luca Mancini</span>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contatti">
         <div class="section-header reveal">
             <h2>VIENI A <span>TROVARCI</span></h2>
@@ -1127,7 +1265,7 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             </form>
         </div>
 
-        <!-- MAPPA INTERATTIVA - Punto preciso Gymnos -->
+        <!-- MAPPA INTERATTIVA -->
         <div class="map-section reveal">
             <div class="map-wrapper">
                 <iframe
@@ -1154,7 +1292,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             </div>
         </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer>
@@ -1235,5 +1372,3 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
     </script>
 </body>
 </html>
-
-
