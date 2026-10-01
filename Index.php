@@ -1,14 +1,6 @@
-Ecco il codice completo aggiornato con l’immagine di **Luca che tiene la bottiglia nera** di Acqua Bollente GymNos.
-
-Ho aggiunto una nuova sezione “Sponsor Ufficiale” subito dopo la trasformazione. Salva l’immagine della bottiglia nera come:
-
-**`luca-sponsor-acqua.jpg`**
-
-```php
 <?php
-// GYMNOS — Palestra a Vignola | Luca Mancini
 $pageTitle = "Gymnos | Palestra a Vignola";
-$tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
+$tagline   = "Trasforma il tuo corpo con Luca Mancini. Supera i tuoi limiti.";
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -16,7 +8,7 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?></title>
-    <meta name="description" content="Gymnos - La palestra di Vignola. Allenati con Luca Mancini. Personal training, corsi di gruppo e attrezzature all'avanguardia.">
+    <meta name="description" content="Gymnos - La palestra di Vignola. Allenati con Luca Mancini. Personal training, mangiatore assoluto di Acqua Bollente e cibo, corsi di gruppo e attrezzature all'avanguardia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1414,13 +1406,3 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
 </body>
 </html>
 ```
-
-### File immagini necessari:
-| File | Descrizione |
-|------|-------------|
-| `luca-mancini.jpg` | Foto principale (hero + trainer) |
-| `luca-allenamento.jpg` | Allenamento di gruppo |
-| `luca-trasformazione.jpg` | Prima / Dopo |
-| `luca-sponsor-acqua.jpg` | **Luca con la bottiglia nera** |
-
-L’immagine della bottiglia nera è ora implementata in una card elegante con badge “SPONSOR UFFICIALE”.
