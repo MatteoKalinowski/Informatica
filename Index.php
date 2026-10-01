@@ -629,22 +629,68 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
 
         /* ========== LUCA IN AZIONE ========== */
         .azione-card {
-            margin-top: 3rem;
-            border-radius: 20px;
+            margin: 3rem auto 0;
+            max-width: 680px;
+            border-radius: 18px;
             overflow: hidden;
             border: 1px solid var(--border);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.35);
             position: relative;
         }
 
         .azione-card img {
             width: 100%;
             display: block;
+            height: 550px;
+            object-fit: cover;
+            object-position: top center;   
             transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .azione-card:hover img {
             transform: scale(1.04);
+        }
+
+        .azione-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            padding: 1.4rem 1.6rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.82));
+        }
+
+        .azione-overlay h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.55rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .azione-overlay p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .azione-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.4rem 1.6rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.82));
+        }
+
+        .azione-overlay h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.55rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .azione-overlay p {
+            color: var(--muted);
+            font-size: 0.9rem;
         }
 
         .azione-overlay {
@@ -1205,7 +1251,7 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
 
         <div class="transformation-quote reveal">
-            <p>“Non serve essere già forti. Serve solo iniziare e non fermarsi.”</p>
+            <p>“La differenza tra me e te soni i panini con tonno e uova del forno Tre Spighe”</p>
             <span>— Luca Mancini</span>
         </div>
     </section>
