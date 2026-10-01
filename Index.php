@@ -1,6 +1,8 @@
-Hai ragione! Ecco la versione **completa e aggiornata** con `luca-allenamento.jpg` implementata in modo carino e dinamico.
+Ecco il codice completo aggiornato con l’immagine di **Luca che tiene la bottiglia nera** di Acqua Bollente GymNos.
 
-Ho aggiunto una piccola sezione “Luca in azione” subito dopo il trainer, con l’immagine dell’allenamento di gruppo. È discreta, elegante e con hover.
+Ho aggiunto una nuova sezione “Sponsor Ufficiale” subito dopo la trasformazione. Salva l’immagine della bottiglia nera come:
+
+**`luca-sponsor-acqua.jpg`**
 
 ```php
 <?php
@@ -50,7 +52,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             overflow-x: hidden;
         }
 
-        /* ========== SCROLLBAR ========== */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -65,7 +66,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             background: var(--accent-dark);
         }
 
-        /* ========== HEADER ========== */
         header {
             position: fixed;
             top: 0;
@@ -96,7 +96,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             letter-spacing: 0.14em;
             color: var(--accent);
             text-decoration: none;
-            position: relative;
             transition: text-shadow 0.3s;
         }
 
@@ -184,7 +183,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             transform: translateY(-7px) rotate(-45deg);
         }
 
-        /* ========== HERO ========== */
         .hero {
             min-height: 100vh;
             display: grid;
@@ -359,7 +357,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             letter-spacing: 0.05em;
         }
 
-        /* ========== STATS ========== */
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -412,7 +409,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             font-weight: 400;
         }
 
-        /* ========== SECTIONS ========== */
         section {
             padding: 6.5rem 2.5rem;
             max-width: 1200px;
@@ -453,7 +449,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             transform: translateY(0);
         }
 
-        /* ========== ABOUT ========== */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -501,7 +496,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             flex-shrink: 0;
         }
 
-        /* ========== SERVICES ========== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -572,7 +566,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             line-height: 1.65;
         }
 
-        /* ========== TRAINER ========== */
         .trainer {
             background: linear-gradient(145deg, var(--surface), var(--surface-2));
             border-radius: 20px;
@@ -643,54 +636,12 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             display: block;
             height: 550px;
             object-fit: cover;
-            object-position: top center;   
+            object-position: top center;
             transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .azione-card:hover img {
             transform: scale(1.04);
-        }
-
-        .azione-overlay {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            padding: 1.4rem 1.6rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.82));
-        }
-
-        .azione-overlay h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.55rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.25rem;
-        }
-
-        .azione-overlay p {
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .azione-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.4rem 1.6rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.82));
-        }
-
-        .azione-overlay h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.55rem;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.25rem;
-        }
-
-        .azione-overlay p {
-            color: var(--muted);
-            font-size: 0.9rem;
         }
 
         .azione-overlay {
@@ -783,6 +734,58 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         .transformation-quote span {
             color: var(--accent);
             font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ========== SPONSOR ACQUA ========== */
+        .sponsor-card {
+            margin: 3.5rem auto 0;
+            max-width: 520px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
+            background: var(--surface);
+        }
+
+        .sponsor-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .sponsor-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .sponsor-badge {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.2rem;
+            background: var(--accent);
+            color: #0a0a0a;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+        }
+
+        .sponsor-info {
+            padding: 1.5rem 1.6rem;
+            text-align: center;
+        }
+
+        .sponsor-info h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.7rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+        }
+
+        .sponsor-info p {
+            color: var(--muted);
             font-size: 0.95rem;
         }
 
@@ -882,7 +885,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             margin-top: 0.4rem;
         }
 
-        /* ========== MAP ========== */
         .map-section {
             margin-top: 3.5rem;
         }
@@ -951,7 +953,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             color: var(--accent);
         }
 
-        /* ========== FOOTER ========== */
         footer {
             background: var(--surface);
             border-top: 1px solid var(--border);
@@ -968,7 +969,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             font-size: 1.2rem;
         }
 
-        /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -1065,7 +1065,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
 </head>
 <body>
 
-    <!-- HEADER -->
     <header id="header">
         <a href="#" class="logo">GYMNOS</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -1082,7 +1081,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>ALLENATI<br><span>SENZA LIMITI</span></h1>
@@ -1101,7 +1099,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </section>
 
-    <!-- STATS -->
     <div class="stats reveal">
         <div class="stat">
             <div class="number" data-target="500">0</div>
@@ -1121,7 +1118,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </div>
 
-    <!-- ABOUT -->
     <section id="about">
         <div class="section-header reveal">
             <h2>CHI <span>SIAMO</span></h2>
@@ -1165,7 +1161,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="servizi">
         <div class="section-header reveal">
             <h2>I NOSTRI <span>SERVIZI</span></h2>
@@ -1205,7 +1200,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </section>
 
-    <!-- TRAINER -->
     <section id="trainer">
         <div class="section-header reveal">
             <h2>IL TUO <span>TRAINER</span></h2>
@@ -1225,7 +1219,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             </div>
         </div>
 
-        <!-- LUCA IN AZIONE -->
         <div class="azione-card reveal">
             <img src="luca-allenamento.jpg" alt="Luca Mancini in allenamento a Gymnos">
             <div class="azione-overlay">
@@ -1235,7 +1228,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </section>
 
-    <!-- TRASFORMAZIONE -->
     <section id="trasformazione">
         <div class="section-header reveal">
             <h2>LA SUA <span>TRASFORMAZIONE</span></h2>
@@ -1251,12 +1243,21 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
 
         <div class="transformation-quote reveal">
-            <p>“La differenza tra me e te soni i panini con tonno e uova del forno Tre Spighe”</p>
+            <p>“La differenza tra me e te sono i panini con tonno e uova del forno Tre Spighe”</p>
             <span>— Luca Mancini</span>
+        </div>
+
+        <!-- SPONSOR ACQUA BOLLENTE -->
+        <div class="sponsor-card reveal">
+            <div class="sponsor-badge">SPONSOR UFFICIALE</div>
+            <img src="luca-sponsor-acqua.jpg" alt="Luca Mancini sponsor Acqua Bollente GymNos">
+            <div class="sponsor-info">
+                <h3>Acqua Bollente GymNos</h3>
+                <p>L’unica acqua ufficiale della palestra. Sempre calda, sempre GymNos.</p>
+            </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contatti">
         <div class="section-header reveal">
             <h2>VIENI A <span>TROVARCI</span></h2>
@@ -1311,7 +1312,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             </form>
         </div>
 
-        <!-- MAPPA INTERATTIVA -->
         <div class="map-section reveal">
             <div class="map-wrapper">
                 <iframe
@@ -1339,20 +1339,17 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p><strong>GYMNOS</strong> · Palestra a Vignola</p>
         <p style="margin-top:0.6rem;">&copy; <?= date('Y') ?> Gymnos. Tutti i diritti riservati.</p>
     </footer>
 
     <script>
-        // Header scroll effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             header.classList.toggle('scrolled', window.scrollY > 40);
         });
 
-        // Mobile menu
         const menuToggle = document.getElementById('menuToggle');
         const nav = document.getElementById('nav');
         menuToggle.addEventListener('click', () => {
@@ -1367,7 +1364,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
             });
         });
 
-        // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1379,7 +1375,6 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
 
         reveals.forEach(el => revealObserver.observe(el));
 
-        // Animated counters
         const counters = document.querySelectorAll('.number[data-target]');
         let countersStarted = false;
 
@@ -1418,3 +1413,14 @@ $tagline   = "Trasforma il tuo corpo. Supera i tuoi limiti.";
     </script>
 </body>
 </html>
+```
+
+### File immagini necessari:
+| File | Descrizione |
+|------|-------------|
+| `luca-mancini.jpg` | Foto principale (hero + trainer) |
+| `luca-allenamento.jpg` | Allenamento di gruppo |
+| `luca-trasformazione.jpg` | Prima / Dopo |
+| `luca-sponsor-acqua.jpg` | **Luca con la bottiglia nera** |
+
+L’immagine della bottiglia nera è ora implementata in una card elegante con badge “SPONSOR UFFICIALE”.
