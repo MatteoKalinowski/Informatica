@@ -28,6 +28,30 @@
 			</ArtistaOspite>
 			<Note>Molto bello</Note>
 		</Traccia>
+		<Traccia>
+			<Titolo>Speed of Light</Titolo>
+			<Durata>2:58</Durata>
+			<Note>Brano energico ispirato ai ritmi del pop contemporaneo</Note>
+		</Traccia>
+		<Traccia>
+			<Titolo>Goalazo</Titolo>
+			<Durata>3:12</Durata>
+			<ArtistaOspite>
+				<NomeArtistaOspite>DJ Turbo</NomeArtistaOspite>
+				<Ruolo>Produttore</Ruolo>
+			</ArtistaOspite>
+			<Note>Omaggio alle sonorità da stadio e alla musica dance</Note>
+		</Traccia>
+		<Traccia>
+			<Titolo>Midnight Stream</Titolo>
+			<Durata>3:26</Durata>
+			<Note>Un pezzo elettronico dal tono notturno</Note>
+		</Traccia>
+		<Traccia>
+			<Titolo>Run It Back</Titolo>
+			<Durata>2:49</Durata>
+			<Note>Chiusura ad alta energia ispirata agli inni hip-hop</Note>
+		</Traccia>
 		<Genere>Phonk</Genere>
 		<Note>Molto bello</Note>
 	</Album>
